@@ -1,7 +1,7 @@
 from http.server import HTTPServer
 from pysimplesoap.server import SoapDispatcher, SOAPHandler
 
-#Funciones que devuelven la suma, resta, multiplicacion y division de 2 numeros
+# suma, resta, multiplicacion y division de 2 numeros
 
 def suma(a,b):
     return a+b
@@ -24,8 +24,8 @@ dispatcher = SoapDispatcher(
     trace=True,
     ns=True,
 )
-#Registro de las funciones suma,resta, multiplicacion y division
-#en el servicio SOAP.
+
+
 server.registerFunction(suma)
 server.registerFunction(resta)
 server.registerFunction(multiplicacion)
